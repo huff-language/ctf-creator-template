@@ -1,26 +1,38 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
 import {Script} from "forge-std/Script.sol";
-import "../src/Utils.sol";
+import "../src/utils/Utils.sol";
 
-string constant SOLVER_HANDLE = ""; // IMPORTANT: PLAYER TO UPDATE THIS!
-
-contract Deploy is Script, Utils {
-
+contract Register is Script, Utils {
     IRegistry public constant REGISTRY = IRegistry(0xf6aE79c0674df852104D214E16AC9c065DAE5896); // registry deployed on Optimism mainnet
 
     function setUp() public {}
 
+    // PLAYER to run this command to register their solution:
+    // forge script script/Solution.s.sol:Register --rpc-url <OPTIMISM RPC URL> --broadcast -vvvv
+    // This needs to be a live transaction on Optimism and you will need to replace <OPTIMISM RPC URL> with a valid url.
+    // You will also need to use an actual wallet which you can do using the --wallet flag or enter your pk in other ways
+    // such as by using the --interactive flag.
     function run() public {
+        // require(ctfId() != 0xff, "IMPORTANT: CREATOR to update ctfId!");
+        // require(verify(), "Solution not passing!"); // check that solution passes
+        uint8 ctfId_ = ctfId();
+        string memory solverHandle_ = playerHandle();
+        bytes32 codeHash_ = codeHash();
+        uint256 gas_ = gasReport();
+        console.log("Calling register() on HuffCTFRegistry contract 0xf6aE79c0674df852104D214E16AC9c065DAE5896 on Optimism mainnet with args:");
+        console.log("ctfId: ");
+        console.logBytes(abi.encode(ctfId_));
+        console.log("solverHandle: ");
+        console.log(solverHandle_);
+        console.log("codeHash: ");
+        console.logBytes(abi.encode(codeHash_));
+        console.log("gas: ");
+        console.logBytes(abi.encode(gas_));
+
         vm.broadcast();
-        require(keccak256(abi.encode(SOLVER_HANDLE)) != keccak256(abi.encode("")), "IMPORTANT: PLAYER to update solverHandle!");
-        REGISTRY.register({
-            ctfId: Utils.ctfId(),
-            solverHandle: SOLVER_HANDLE,
-            codeHash: codeHash(),
-            gas: Utils.gasReport()
-        });
+        REGISTRY.register({ctfId: ctfId_, solverHandle: solverHandle_, codeHash: codeHash_, gas: gas_});
     }
 }
 
