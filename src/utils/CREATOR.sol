@@ -29,7 +29,7 @@ library CREATOR {
         // uint start = gasleft();
         // solution.call(abi.encodeWithSignature("function1()"));
         // solution.call(abi.encodeWithSignature("function2()"));
-        // gasUsed = gasleft();
+        // gasUsed = start - gasleft();
 
         revert("IMPORTANT: CREATOR to update gasReport()");
 
