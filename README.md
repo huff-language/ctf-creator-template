@@ -1,5 +1,5 @@
-# Creator Huff CTF Template
-Welcome to the Creator Huff CTF Template! This guide will assist you in setting up your CTF challenge repository.
+# Huff Challenge Creator Template
+Welcome to the Huff Challenge Creator Template! This guide will assist you in setting up your challenge repository.
 
 #### TODO: Once you're done setting up, delete this file and then rename [PLAYER_README.md](PLAYER_README.md)
  to README.md to replace this one.
@@ -13,7 +13,7 @@ Create a New Repository - Start by creating a new repository based on this templ
 1. Update the CREATOR.sol File
 Make the following changes to the CREATOR.sol file:
 
- - **_ctfId**: Update the _ctfId with a unique id number provided by the CTF admin.
+ - **_challengeId**: Update the _challengeId with a unique id number provided by the Huff admin.
 
  - **verify()**: Function: This function should return either true or false based on whether the provided solution is correct. Implement the logic that checks the solution.
  ```solidity
@@ -36,5 +36,5 @@ As a final step, delete or rename the current README.md and then rename PLAYER_R
 Before making the repository public, ensure that you haven't left in any solutions or other unintended hints.
 
 5. Go Public!
-Once you're ready and the CTF has officially begun, change the repository visibility to PUBLIC.
+Once you're ready and the challenge has officially begun, change the repository visibility to PUBLIC.
 

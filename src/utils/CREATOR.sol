@@ -1,15 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-// ******* This is for use by the CTF creator only!     *******
+// ******* This is for use by the challenge creator only!     *******
 // ******* Players do not need to change anything here. *******
 library CREATOR {
 
-    uint8 constant internal _ctfId = 0xff; // IMPORTANT: CREATOR TO UPDATE THIS!
-    function ctfId() public pure returns (uint8) {
-        require(_ctfId != 0xff, "IMPORTANT: CREATOR to update ctfId!");
-        return _ctfId;
-    }
+    uint8 constant internal _challengeId = 0xff; // IMPORTANT: CREATOR TO UPDATE THIS!
 
     // IMPORTANT: CREATOR TO UPDATE THIS!
     // This function returns true or false if the solution is correct.
@@ -35,4 +31,8 @@ library CREATOR {
 
     }
 
+    function challengeId() public pure returns (uint8) {
+        require(_challengeId != 0xff, "IMPORTANT: CREATOR to update challengeId!");
+        return _challengeId;
+    }
 }

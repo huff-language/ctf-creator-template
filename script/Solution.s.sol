@@ -15,15 +15,15 @@ contract Register is Script, Utils {
     // You will also need to use an actual wallet which you can do using the --wallet flag or enter your pk in other ways
     // such as by using the --interactive flag.
     function run() public {
-        require(ctfId() != 0xff, "IMPORTANT: CREATOR to update ctfId!");
+        require(challengeId() != 0xff, "IMPORTANT: CREATOR to update challengeId!");
         require(verify(), "Solution not passing!"); // check that solution passes
-        uint8 ctfId_ = ctfId();
+        uint8 challengeId_ = challengeId();
         string memory solverHandle_ = playerHandle();
         bytes32 codeHash_ = codeHash();
         uint256 gas_ = gasReport();
         console.log("Calling register() on HuffCTFRegistry contract 0xf6aE79c0674df852104D214E16AC9c065DAE5896 on Optimism mainnet with args:");
-        console.log("ctfId: ");
-        console.logBytes(abi.encode(ctfId_));
+        console.log("challengeId: ");
+        console.logBytes(abi.encode(challengeId_));
         console.log("solverHandle: ");
         console.log(solverHandle_);
         console.log("codeHash: ");
@@ -32,10 +32,10 @@ contract Register is Script, Utils {
         console.logBytes(abi.encode(gas_));
 
         vm.broadcast();
-        REGISTRY.register({ctfId: ctfId_, solverHandle: solverHandle_, codeHash: codeHash_, gas: gas_});
+        REGISTRY.register({challengeId: challengeId_, solverHandle: solverHandle_, codeHash: codeHash_, gas: gas_});
     }
 }
 
 interface IRegistry {
-    function register(uint8 ctfId, string calldata solverHandle, bytes32 codeHash, uint256 gas) external;
+    function register(uint8 challengeId, string calldata solverHandle, bytes32 codeHash, uint256 gas) external;
 }

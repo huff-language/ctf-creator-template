@@ -1,12 +1,12 @@
 # Welcome Players!
 
-Greetings, Huffoor! This document will guide you through the steps to solve this CTF challenge and register your solution.
+Greetings, Huffoor! This document will guide you through the steps to solve this challenge and register your solution.
 
 ## Overview
 
-_This is where you describe what the CTF is about, for example:_
+_This is where you describe what the challenge is about, for example:_
 
-_"In this CTF you will optimize this contract..."_
+_"In this challenge you will optimize this contract..."_
 
 _"Write a contract with a function that returns a square root..."_
 
@@ -53,6 +53,6 @@ Also note:
 - You can also interact directly with the Optimism [block explorer](https://optimistic.etherscan.io/address/0xf6aE79c0674df852104D214E16AC9c065DAE5896#writeContract). This is not the recommended way due to the danger of human error. If you want to see the exact input parameters you can run the Register script above and DO NOT use a private key.  The arguments will be console.logged for you.
 ## Wrapping Up
 
-That's all there is to it! Once the CTF concludes, feel free to make your repository public. If your solution ranks among the top contenders, it will undergo a human review. Stay updated by keeping an eye on our Discord channel and Twitter feed.
+That's all there is to it! Once the challenge concludes, feel free to make your repository public. If your solution ranks among the top contenders, it will undergo a human review. Stay updated by keeping an eye on our Discord channel and Twitter feed.
 
 Best of luck, and may the best coder win!

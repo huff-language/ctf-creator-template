@@ -10,8 +10,8 @@ contract SolutionTest is Test, Utils {
 
     function setUp() public {}
 
-    function testCtfId() public {
-        require(ctfId() != 0xff, "IMPORTANT: CREATOR to update ctfId!");
+    function testchallengeId() public {
+        require(challengeId() != 0xff, "IMPORTANT: CREATOR to update challengeId!");
     }
 
     function testPlayerHandle() public {

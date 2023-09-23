@@ -28,8 +28,8 @@ contract Utils is Test {
         return keccak256(bytecode);
     }
 
-    function ctfId() public pure returns (uint8) {
-        return CREATOR.ctfId();
+    function challengeId() public pure returns (uint8) {
+        return CREATOR.challengeId();
     }
 
     function playerHandle() public returns (string memory PLAYER_HANDLE) {
