@@ -15,8 +15,8 @@ contract Register is Script, Utils {
     // You will also need to use an actual wallet which you can do using the --wallet flag or enter your pk in other ways
     // such as by using the --interactive flag.
     function run() public {
-        // require(ctfId() != 0xff, "IMPORTANT: CREATOR to update ctfId!");
-        // require(verify(), "Solution not passing!"); // check that solution passes
+        require(ctfId() != 0xff, "IMPORTANT: CREATOR to update ctfId!");
+        require(verify(), "Solution not passing!"); // check that solution passes
         uint8 ctfId_ = ctfId();
         string memory solverHandle_ = playerHandle();
         bytes32 codeHash_ = codeHash();

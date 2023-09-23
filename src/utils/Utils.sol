@@ -6,7 +6,6 @@ import "forge-std/Test.sol";
 
 // huff-runner
 import {compileWithVersion, create, EvmVersion} from "huff-runner/Deploy.sol";
-
 using {compileWithVersion} for Vm;
 using {create} for bytes;
 
