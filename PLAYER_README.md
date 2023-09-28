@@ -2,6 +2,10 @@
 
 Greetings, Huffoor! This document will guide you through the steps to solve this challenge and register your solution.
 
+**NOTE** -- after you submit, if you want to change your Huff code (for example to try and optimize even more) Please remember to retain your original code that matches the hash! The winner's Huff code will be human reviewed and if it doesn't match the Hash you submitted then it will not count.
+
+**ALSO NOTE** -- Unless otherwise instructed, you are only allowed to update the PLAYER_SOLUTION.huff.  Although you may use the test files or create new files to dev and debug as you wish.
+
 ## Overview
 
 _This is where you describe what the challenge is about, for example:_
@@ -51,7 +55,10 @@ Note:
 
 Also note:
 - You can also interact directly with the Optimism [block explorer](https://optimistic.etherscan.io/address/0xf6aE79c0674df852104D214E16AC9c065DAE5896#writeContract). This is not the recommended way due to the danger of human error. If you want to see the exact input parameters you can run the Register script above and DO NOT use a private key.  The arguments will be console.logged for you.
+
 ## Wrapping Up
+
+**NOTE** -- after you submit, if you want to change your Huff code (for example to try and optimize even more) Please remember to retain your original code that matches the hash! The winner's Huff code will be human reviewed and if it doesn't match the Hash you submitted then it will not count.
 
 That's all there is to it! Once the challenge concludes, feel free to make your repository public. If your solution ranks among the top contenders, it will undergo a human review. Stay updated by keeping an eye on our Discord channel and Twitter feed.
 
